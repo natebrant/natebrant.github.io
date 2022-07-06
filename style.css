@@ -132,7 +132,7 @@ color: #04aa6d;}
 
 
 
-#return-to-top {
+.return-to-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -152,7 +152,7 @@ color: #04aa6d;}
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-#return-to-top i {
+.return-to-top i {
   color: #fff;
   margin: 0;
   position: relative;
@@ -166,10 +166,10 @@ color: #04aa6d;}
   transition: all 0.3s ease;
   color: #dd7d53;
 }
-#return-to-top:hover {
+.return-to-top:hover {
   background: rgba(0, 0, 0, 0.9);
 }
-#return-to-top:hover i {
+.return-to-top:hover i {
   color: #fff;
   top: 5px;
 }
@@ -179,7 +179,7 @@ footer{color: #dd7d53;text-align: right;padding: 1%;border-top: #dd7d53 solid;}
 
 
 
-#mode {
+.mode {
   position: fixed;
   top: 20px;
   right: 20px;
@@ -198,7 +198,7 @@ footer{color: #dd7d53;text-align: right;padding: 1%;border-top: #dd7d53 solid;}
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-#mode i {
+.mode i {
   color: #fff;
   margin: 0;
   position: relative;
@@ -212,10 +212,10 @@ footer{color: #dd7d53;text-align: right;padding: 1%;border-top: #dd7d53 solid;}
   transition: all 0.3s ease;
   color: #dd7d53;
 }
-#mode:hover {
+.mode:hover {
   background: rgba(0, 0, 0, 0.9);
 }
-#mode:hover i {
+.mode:hover i {
   color: #fff;
 } 
 

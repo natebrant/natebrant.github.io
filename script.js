@@ -12,7 +12,7 @@ $('#return-to-top').click(function() {
     }, 500);
 });
 // makes dark and light mode 
-$("#mode").click(function(){
+$(".mode").click(function(){
     $("body").toggleClass("dark");
     $("body").toggleClass("body");
     $("#nav").toggleClass("topnav")

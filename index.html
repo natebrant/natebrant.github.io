@@ -99,11 +99,22 @@
             height: auto;
             border-radius: 5px;
         }
+        #whyILoveGabe {
+            background-color: #ffccbc; /* Light orange */
+            padding: 2rem;
+            text-align: center;
+        }
+        #whyILoveGabe p {
+            font-size: 1.2rem;
+            color: #6a1b9a; /* Dark purple */
+            line-height: 1.5;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>ILoveYouGabe</h1>
+        <h6>(Click the Photos)</h6>
     </header>
 
     <section id="cats">
@@ -241,7 +252,7 @@
                 <p class="photo-caption">Us <3 </p>
             </div>
             <div>
-                <img id="photo3" src="You/IMG_6372.jpg" alt="Photo 3" onclick="openModal('modalPhoto3')">
+                <img id="photo3" src="You/IMG_6382.jpg" alt="Photo 3" onclick="openModal('modalPhoto3')">
                 <p class="photo-caption">You</p>
             </div>
         </div>
@@ -284,7 +295,7 @@
     </div>
 
     <!-- Modal for Cat 3 -->
-    <div id="Photo3" class="modal">
+    <div id="modalPhoto3" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modalPhoto3')">&times;</span>
             <div class="grid">
@@ -349,5 +360,23 @@
         });
     </script>
     </section>
+        <!-- New Section: Why I Love Gabe -->
+        <section id="whyILoveGabe">
+            <h2>Why I Love You</h2>
+            <p>
+                Gabe, you are the most amazing person I know. Your kindness, humor, and intelligence inspire me every day. I feel so lucky to have you in my life, and I can't wait to create more beautiful memories together. You make me a better person, and I love you more than words can express.
+            </p>
+        </section>
+    
+        <script>
+            function openModal(modalId) {
+                document.getElementById(modalId).style.display = "block";
+            }
+    
+            function closeModal(modalId) {
+                document.getElementById(modalId).style.display = "none";
+            }
+        </script>
+  
 </body>
 </html>

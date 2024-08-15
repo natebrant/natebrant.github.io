@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeaTalk Home</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="flex">
+            <div class="block" style="margin-left:1%; white-space: nowrap;">
+                <h1 onclick="location.href='index.html'">TeaTalk Give Cards</h1>
+            </div>
+            <div class="block space"></div>
+            <div class="block">
+                <button class="nav-button block" onclick="location.href='index.html'">Home</button>
+            </div>
+            <form class="form">
+                <input class="input" type="password" placeholder="password" id="password">
+            </form>
+            <button class="btn" id="passSubmit">Submit</button>
+        </div>
+    </div>
+    <form class="form">
+        <h1 class="center">Add Card</h1>
+        <input class="input" name="id" placeholder="Id" id="addName">
+        <input class="input" name="Amount" placeholder="Amount" id="addAmount">
+        <input type="submit" value="Submit" id="addSubmit">
+    </form>
+    <form class="form">
+        <h1 class="center">Card Balance</h1>
+        <input class="input" name="id" placeholder="Id" id="balName">
+        <input type="submit" value="Submit" id="balSubmit">
+    </form>
+    <form class="form">
+        <h1 class="center">Card Redeem</h1>
+        <input class="input" name="id" placeholder="Id" id="useName">
+        <input class="input" name="Amount" placeholder="Amount" id="useAmount">
+        <input type="submit" value="Submit" id="useSubmit">
+    </form>
+    <script type="module" src="./script.js "></script>
+</body>
+
+</html>

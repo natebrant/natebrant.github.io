@@ -1,0 +1,29 @@
+// TODO : Front end
+Think of a name for the website
+Hide password while typing it 
+Eventually: add a sidebar on server that will show users online 
+
+//TODO: back end
+Make it so that if someone is not logged in it will go to the login page 
+Show users online state if they are online with the server faved 
+Maybe: find a way to say user is typing
+
+Person class{
+this.favorits [] 
+This.name
+This.password
+This.uname
+This.online /make it changeable by user but should add a way to check in they are online auto
+This.role /mod or user mods will have command that can use in any server
+this . color used to pick the chat color if mod or chat set
+}
+Server class{
+This.dir / used to get link to this page
+This.limit / set the limit to amount of people that can join this server
+this.users[] / a list of people with this page favorited also to be used to say how many people are joined by using .length/size
+this.chat [] /saves an array of the chat / not sure if this is the way ill update or no though
+Public serverupdate(String chat){
+Will go to firebase and append chat to the firebase then update it for all users
+}
+}
+

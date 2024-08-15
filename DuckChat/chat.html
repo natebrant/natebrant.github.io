@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Home</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script type="module" src="script.js "></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="flex">
+            <div class="block" style="margin-left:1%; white-space: nowrap;">
+                <h1 onclick="location.href='index.html'">Duck Chat</h1>
+            </div>
+            <div class="block space"></div>
+
+            <div class="block">
+                <button class="nav-button block" onclick="location.href='index.html'">Home</button>
+            </div>
+            <!-- <div class=" block ">
+                <button class="nav-button block " onclick="location.href='favorites.html'">Favorites</button>
+            </div> -->
+            <div class="block dropdown">
+                <button class="nav-button block dropbtn" id="account" onclick="location.href='account.html'">Sign/Log in</button>
+                <div class="dropdown-content">
+                    <div>Profile</div>
+                    <div id="Username"></div>
+                    <div id="name"></div>
+                    <div id="email"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main ">
+        <div class="textbox toSend" id="toSend" style='height:500px;'>
+
+
+        </div>
+
+
+        <div class="textbox input">
+            <input class="textbox input chat" id="chat" type="text" name="message" style='width:97%;' placeholder="Message...">
+            <input class="textbox input chat" id="send" type="submit" value="Send">
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

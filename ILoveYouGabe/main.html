@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ILoveYouGabe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+
+            
+            background-color: #ff914d; /* Orange */
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        section {
+            padding: 2rem;
+            margin: 0;
+            background-color: #fff2e6; /* Light orange */
+        }
+        h2 {
+            color: #9c27b0; /* Purple */
+        }
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .photo-gallery div {
+            flex: 1;
+            margin: 10px;
+            text-align: center;
+            max-width: 30%;
+        }
+        .photo-gallery div.middle {
+            flex: 1.5; /* Make the middle image container larger */
+        }
+        .photo-gallery img {
+            width: 100%;
+            height: auto;
+            max-height: 300px; /* Ensure all images are the same height */
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .photo-caption {
+            margin-top: 0.5rem;
+            font-style: italic;
+            color: #5d4037; /* Dark brown */
+        }
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ILoveYouGabe</h1>
+    </header>
+
+    <section id="cats">
+        <h2>Cats</h2>
+        <div class="photo-gallery">
+            <div>
+                <img id="cat1" src="" alt="Cat 1" onclick="openModal('modalCat1')">
+                <p class="photo-caption">This is Eggs.</p>
+            </div>
+            <div class="middle">
+                <img id="cat2" src="" alt="Cat 2" onclick="openModal('modalCat2')">
+                <p class="photo-caption">This is Squish.</p>
+            </div>
+            <div>
+                <img id="cat3" src="" alt="Cat 3" onclick="openModal('modalCat3')">
+                <p class="photo-caption">This is Vincent</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Cat 1 -->
+    <div id="modalCat1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalCat1')">&times;</span>
+            <div class="grid">
+                <img src="Egg/IMG_6404.JPG" alt="Cat 1 Photo 1">
+                <img src="Egg/IMG_6405.JPG" alt="Cat 1 Photo 2">
+                <img src="Egg/IMG_6406.JPG" alt="Cat 1 Photo 3">
+                <img src="Egg/IMG_6227.JPG" alt="Cat 1 Photo 4">
+                <img src="Egg/IMG_6407.JPG" alt="Cat 1 Photo 5">
+                <img src="Egg/IMG_6412.JPG" alt="Cat 1 Photo 6">
+                <img src="Egg/IMG_6172.JPG" alt="Cat 1 Photo 7">
+                <img src="Egg/IMG_3085.jpg" alt="Cat 1 Photo 8">
+                <img src="Egg/IMG_6426.jpg" alt="Cat 1 Photo 9">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Cat 2 -->
+    <div id="modalCat2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalCat2')">&times;</span>
+            <div class="grid">
+                <img src="Fish/IMG_4815.jpg" alt="Cat 2 Photo 1">
+                <img src="Fish/IMG_6366.jpg" alt="Cat 2 Photo 2">
+                <img src="Fish/IMG_6368.jpg" alt="Cat 2 Photo 3">
+                <img src="Fish/IMG_6399.JPG" alt="Cat 2 Photo 4">
+                <img src="Fish/IMG_6422.JPG" alt="Cat 2 Photo 5">
+                <img src="Fish/IMG_6402 (2).JPG" alt="Cat 2 Photo 6">
+                <img src="Fish/IMG_6408.JPG" alt="Cat 2 Photo 7">
+                <img src="Fish/IMG_6420.JPG" alt="Cat 2 Photo 8">
+                <img src="Fish/IMG_6424 (1).JPG" alt="Cat 2 Photo 9">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Cat 3 -->
+    <div id="modalCat3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalCat3')">&times;</span>
+            <div class="grid">
+                <img src="Cent/IMG_5661.JPG" alt="Cat 3 Photo 1">
+                <img src="Cent/IMG_6175.JPG" alt="Cat 3 Photo 2">
+                <img src="Cent/IMG_6190.jpg" alt="Cat 3 Photo 3">
+                <img src="Cent/IMG_6191.jpg" alt="Cat 3 Photo 4">
+                <img src="Cent/IMG_6401.JPG" alt="Cat 3 Photo 5">
+                <img src="Cent/IMG_6413.JPG" alt="Cat 3 Photo 6">
+                <img src="Cent/IMG_6415.JPG" alt="Cat 3 Photo 7">
+                <img src="Cent/IMG_6418.JPG" alt="Cat 3 Photo 8">
+                <img src="Cent/RenderedImage.JPG" alt="Cat 3 Photo 9">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to open a modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        // Function to close a modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Close the modal when clicking outside of it
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            });
+        }
+
+        // Function to get a random image from a set of images
+        function getRandomImage(catId, imagePathArray) {
+            const randomIndex = Math.floor(Math.random() * imagePathArray.length);
+            document.getElementById(catId).src = imagePathArray[randomIndex];
+        }
+
+        // Set the random images for each cat
+        document.addEventListener("DOMContentLoaded", function() {
+            // Replace the array content with the actual paths to your images
+            getRandomImage('cat1', [
+                'Egg/IMG_6227.JPG',
+                'Egg/IMG_6172.JPG',
+                'Egg/IMG_3085.jpg'
+            ]);
+            getRandomImage('cat2', [
+                'Fish/IMG_6422.JPG',
+                'Fish/IMG_6399.JPG',
+                'Fish/IMG_6420.JPG'
+            ]);
+            getRandomImage('cat3', [
+                'Cent/IMG_6175.JPG',
+                'Cent/IMG_6191.jpg',
+                'Cent/IMG_6413.JPG'
+            ]);
+        });
+    </script>
+</body>
+</html>
+
+
+    <section id="favorite-photos">
+        <h2>Favorite Photos of Us</h2>
+        <div class="photo-gallery">
+            <div>
+                <img id="Photo1" src="" alt="Photo 1" onclick="openModal('modalPhoto1')">
+                <p class="photo-caption">Funny</p>
+            </div>
+            <div class="middle">
+                <img id="Photo2" src="" alt="Photo 2" onclick="openModal('modalPhoto2')">
+                <p class="photo-caption">Us <3 </p>
+            </div>
+            <div>
+                <img id="photo3" src="You/IMG_6372.jpg" alt="Photo 3" onclick="openModal('modalPhoto3')">
+                <p class="photo-caption">You</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Cat 1 -->
+    <div id="modalPhoto1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalPhoto1')">&times;</span>
+            <div class="grid">
+                <img src="Funny/image000000.JPG" alt="Photo 1">
+                <img src="Funny/IMG_6279.jpg" alt="Photo 2">
+                <img src="Funny/IMG_6296.jpg" alt="Photo 3">
+                <img src="Funny/IMG_6353.jpg" alt="Photo 4">
+                <img src="Funny/IMG_6382.jpg" alt="Photo 5">
+                <img src="Funny/IMG_6423.JPG" alt="Photo 6">
+                <img src="Funny/IMG_6433.JPG" alt="Photo 7">
+                <img src="Funny/IMG_6439.JPG" alt="Photo 8">
+                <img src="Funny/IMG_6441.JPG" alt="Photo 9">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Cat 2 -->
+    <div id="modalPhoto2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalPhoto2')">&times;</span>
+            <div class="grid">
+                <img src="Us/IMG_6269.JPG" alt="Photo 1">
+                <img src="Us/IMG_6305.jpg" alt="Photo 2">
+                <img src="Us/IMG_6371.jpg" alt="Photo 3">
+                <img src="Us/IMG_6416.JPG" alt="Photo 4">
+                <img src="Us/IMG_6417.JPG" alt="Photo 5">
+                <img src="Us/IMG_6432.JPG" alt="Photo 6">
+                <img src="Us/IMG_6438.JPG" alt="Photo 7">
+                <img src="Us/IMG_6437.JPG" alt="Photo 8">
+                <img src="Us/IMG_6434.JPG" alt="Photo 9">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Cat 3 -->
+    <div id="Photo3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalPhoto3')">&times;</span>
+            <div class="grid">
+                <img src="You/image000001.jpeg" alt="Photo 1">
+                <img src="You/IMG_5959.JPG" alt="Photo 2">
+                <img src="You/IMG_6147.JPG" alt="Photo 3">
+                <img src="You/IMG_6256.JPG" alt="Photo 4">
+                <img src="You/IMG_6258.JPG" alt="Photo 5">
+                <img src="You/IMG_6372.jpg" alt="Photo 6">
+                <img src="You/IMG_6379.jpg" alt="Photo 7">
+                <img src="You/IMG_6382.jpg" alt="Photo 8">
+                <img src="You/IMG_6431.JPG" alt="Photo 9">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to open a modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        // Function to close a modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Close the modal when clicking outside of it
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            });
+        }
+
+        // Function to get a random image from a set of images
+        function getRandomImage(catId, imagePathArray) {
+            const randomIndex = Math.floor(Math.random() * imagePathArray.length);
+            document.getElementById(catId).src = imagePathArray[randomIndex];
+        }
+
+        // Set the random images for each cat
+        document.addEventListener("DOMContentLoaded", function() {
+            // Replace the array content with the actual paths to your images
+            getRandomImage('Photo1', [
+                'Funny/IMG_6353.jpg',
+                'Funny/IMG_6433.JPG',
+                'Funny/IMG_6439.JPG'
+            ]);
+            getRandomImage('Photo2', [
+                'Us/IMG_6417.JPG',
+                'Us/IMG_6269.JPG',
+                'Us/IMG_6434.JPG'
+            ]);
+            getRandomImage('Photo3', [
+                'You/IMG_5959.JPG',
+                'You/IMG_6372.jpg',
+                'You/IMG_6379.jpg'
+            ]);
+        });
+    </script>
+    </section>
+</body>
+</html>
